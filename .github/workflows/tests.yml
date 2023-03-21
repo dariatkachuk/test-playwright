@@ -1,4 +1,3 @@
-name: "tests"
 on:
   push:
     branches:
@@ -17,4 +16,4 @@ jobs:
           screenshots: test-artifacts
           path: screenshot*.png
       - run: npm install  # проинсталлируем зависимости
-      - run: demo.js  # запустим приложение
+      - run: node demo.js  # запустим приложение
