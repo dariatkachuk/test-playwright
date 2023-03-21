@@ -12,9 +12,9 @@ jobs:
       - uses: actions/checkout@v2  # чекаутим репозиторий
       - uses: actions/setup-node@v1  # установим Node
       - uses: microsoft/playwright-github-action@v1  # подготовим окружение
-	- run: npm install  # проинсталлируем зависимости
-	- run: demo.js  # запустим приложение
-  - uses: actions/upload-artifact@v2
-  with:
-    screenshots: test-artifacts
-    path: screenshot*.png
+      - uses: actions/upload-artifact@v2
+        with:
+          screenshots: test-artifacts
+          path: screenshot*.png
+      - run: npm install  # проинсталлируем зависимости
+      - run: demo.js  # запустим приложение
