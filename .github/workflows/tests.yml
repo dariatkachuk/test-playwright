@@ -17,5 +17,6 @@ jobs:
           name: screenshots
           path: screenshot*.png
       - run: npm install  # проинсталлируем зависимости
-      - run: demo/demo.js  # запустим приложение     
+      - run: demo/demo.js  # запустим приложение   
+      - run: git ci -am 'devolps:add ci
 
