@@ -1,3 +1,4 @@
+name: Playwright Tests
 on:
   push:
     branches:
@@ -13,7 +14,8 @@ jobs:
       - uses: microsoft/playwright-github-action@v1  # подготовим окружение
       - uses: actions/upload-artifact@v2
         with:
-          screenshots: test-artifacts
+          name: screenshots
           path: screenshot*.png
       - run: npm install  # проинсталлируем зависимости
-      - run: node demo.js  # запустим приложение
+      - run: demo.js  # запустим приложение     
+
